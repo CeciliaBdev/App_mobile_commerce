@@ -9,7 +9,7 @@ interface LoaderProps {
 export default function Loader({setLoading}:LoaderProps) {
     return (
       <View style={styles.animation}>
-        <LottieView source={require('../assets/loader.json')} autoPlay loop={false} onAnimationFinish={() => setLoading(false)} style={{ height:150 }}  />
+        <LottieView source={require('../assets/loader_restaurant.json')} autoPlay loop={false} onAnimationFinish={() => setLoading(false)} style={{ height:150 }}  />
       </View>
     )
   }
