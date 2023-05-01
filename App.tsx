@@ -1,16 +1,29 @@
 import { StyleSheet} from 'react-native'
 import React from 'react'
-import Loader from './components/Loader'
-import Home from './components/home'
-import LoginScreen from './components/LoginScreen'
+// import Loader from './components/Loader'
+// import Home from './components/Home'
+// import LoginScreen from './components/LoginScreen'
+import {NavigationContainer} from '@react-navigation/native';
+import AuthStack from './components/AuthStack'
 
+
+// const Stack = createNativeStackNavigator();
 
 const App = () => {
  
-  const [isLoading, setLoading] = React.useState<boolean>(true)
-
-  // return isLoading ? <Loader setLoading={setLoading}/> : <Home />
-  return isLoading ? <Loader setLoading={setLoading}/> : <LoginScreen />
+  // const [isLoading, setLoading] = React.useState<boolean>(true)
+  return (
+    <NavigationContainer>
+      {/* isLoading ? <Loader setLoading={setLoading}/> : <LoginScreen />
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator> */}
+      <AuthStack />
+    </NavigationContainer>
+      
+  )
+ 
 }
 
 const styles = StyleSheet.create({
