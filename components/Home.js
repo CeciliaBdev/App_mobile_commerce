@@ -11,11 +11,11 @@ const Home = ({}) => {
 
 
   return (
-    <View>
+    <View style={styles.container}>
      <ScrollView >
         <View style={styles.title}>
           {/* <MaterialIcons name="arrow-back" color="#333" size={20}  style={{paddingHorizontal:5}} onPress={() => navigation.navigate('Login')}/>  */}
-          <Text >Mon application</Text> 
+          <Text style={{fontWeight:'bold', fontSize:22}}>Boulangerie Cécilia</Text> 
         </View> 
         <View style={styles.banner}> 
           <Text>Nos produits</Text>
@@ -26,9 +26,9 @@ const Home = ({}) => {
            
             <View style={styles.card} key={id}>
               <Image source={data.image} style={styles.imagetest} />
-              
-                <View > 
-                  <Text>{data.article}</Text>
+    
+              <View style={styles.text_card} > 
+                  <Text style={{fontWeight:'bold', color:'red'}}>{data.article}</Text>
                   <Text>{data.price} euros</Text>
                   <View  style={{flexDirection:'column', gap:20}}> 
                   <CountButton />
@@ -38,14 +38,19 @@ const Home = ({}) => {
            );
           })}
         </View>
-      </ScrollView>    
+      </ScrollView>  
+      <View style={styles.footer}>
+        <MaterialIcons name="logout" color="black" size={30} />
+        <MaterialIcons name="shopping-cart" color="black" size={30} />
+      </View>  
     </View>
   )
 }
 const styles = StyleSheet.create({
-    
+      container:{ flex:1},
+
      title: {
-      backgroundColor: 'red',
+      backgroundColor: '#FFB6C1',
       height:100,
       justifyContent:'space-around',
       alignItems:'center', 
@@ -58,15 +63,28 @@ const styles = StyleSheet.create({
        alignItems:'center'
       },
       imagetest:{
-       width:150,
+       width:'65%',
        height:100,
-      marginRight:50
+      marginRight:50,
+     
       },
       card:{
        flexDirection:'row',
        alignItems:'center',
        justifyContent:'center',
-       margin:20
+       marginHorizontal:60,
+       marginVertical:20,
+       
+      },
+      text_card:{
+        width:'50%',
+      },
+      footer:{
+        height:60,
+        backgroundColor:'#FFB6C1',
+        flexDirection:'row',
+       alignItems:'center', 
+       justifyContent:'space-around'
       }
    });
 export default Home
