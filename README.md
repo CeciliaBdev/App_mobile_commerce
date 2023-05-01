@@ -1,11 +1,14 @@
 # App_mobile_commerce
 
-## dependencies
+## Demo
+![demo](assetsreadme/demo.gif)
+
+## Dependencies
 
 * React Native : https://reactnative.dev/docs/environment-setup?guide=native
 * Cocoapods (iOS App) : 1.12.1 (install with homebrew : `brew install cocoapods`)
 
-## run project (on MacOS)
+## Run project (on MacOS)
 
 Run following commands :
 ```
@@ -18,3 +21,5 @@ cd ..
 npx react-native start
 ```
 And choose `i` for run iOS version.
+
+
