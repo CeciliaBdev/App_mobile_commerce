@@ -1,7 +1,8 @@
 # App_mobile_commerce
 
 ## Demo
-![demo](assetsreadme/demo.gif)
+
+![](demo.gif)
 
 ## Dependencies
 
